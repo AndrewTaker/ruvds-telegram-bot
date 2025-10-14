@@ -1,0 +1,7 @@
+include vars:
+
+PAYMENT_URL
+BOT_TOKEN
+SERVER_ID
+RUVDS_TOKEN
+
