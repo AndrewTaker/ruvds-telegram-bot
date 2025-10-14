@@ -42,9 +42,8 @@ async def info(
         await update.message.reply_text(e)
         return
 
-    locale.setlocale(locale.LC_TIME, "ru_RU.UTF-8")
     dt = datetime.fromisoformat(paid_till)
-    paid_till_readable = dt.strftime("%A, %d %B, %Y")
+    paid_till_readable = dt.strftime("%d.%m.%Y")
 
     message = (
         f"сейчас: {balance}\n"
