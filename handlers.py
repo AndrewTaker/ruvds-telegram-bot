@@ -44,11 +44,13 @@ async def info(
 
     dt = datetime.fromisoformat(paid_till)
     paid_till_readable = dt.strftime("%d.%m.%Y")
+    needed = cost - balance
 
     message = (
         f"сейчас: {balance}\n"
         f"оплачен до: {paid_till_readable}\n"
         f"стоимость: {cost}\n"
+        f"необходимо доплатить: {needed}\n"
         f"ссылка для оплаты: {PAYMENT_URL}\n"
     )
     await update.message.reply_text(message)
